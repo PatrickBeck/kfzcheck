@@ -1,0 +1,26 @@
+KFZcheck.py 
+==========
+(c) Patrick Beck ( pbeck at yourse dot de )
+
+KFZcheck is a small program written in python and uses the gtk toolkit
+It searches for car (in german kfz) license plates shortcuts and the citys according to 
+the searchword - german example: S for Stuttgart. A german, austrian, swiss and poland license plate
+list is till now included.
+
+KFZcheck searches automaticlly for csv files in /opt/kfzcheck/kfzlist/. The files should be
+named with the country code => Example de.csv for germany.
+
+The ~/.kfzcheck.ini saves the last selected country so you can load your favorite first :) It will
+be set automaticly when you change the country in the gui.
+
+The german file structur is for example => S,Stuttgart,Baden-Württemberg
+S is the car license plate shortcut, Stuttgart the according city to the shortcut and Baden-Württemberg
+stands for a province (a state in state).
+
+When emblems should be displayed you have to create a folder in /opt/kfzcheck/wappen/ with the countrycode as name.
+In the folder you can save the differend emblems. They have to be png files with the exactly name of the province (it's casesensitive).
+
+When you have created a country pack i am interested to integrate it in the offical release - please mail me :)
+
+KFZcheck is licensed under the GPL3 license
+

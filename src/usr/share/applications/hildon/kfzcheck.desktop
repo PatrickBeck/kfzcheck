@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=KFZcheck
+Comment=Search for kfz license plates
+Exec=/opt/kfzcheck/kfzcheck.py
+Terminal=0
+Type=Application
+Icon=kfzcheck
+Categories=utility
+StartupNotify=False
+

@@ -1,0 +1,63 @@
+# KFZcheck german translation
+# Copyright (C) 2010
+# Patrick Beck <pbeck at yourse dot de>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2010-03-20 16:16+CET\n"
+"PO-Revision-Date: 2010-03-07\n"
+"Last-Translator: Patrick Beck <pbeck at yourse dot de>\n"
+"Language-Team: DE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: kfzcheck.py:93
+msgid "csv file not found or has not enough rights."
+msgstr "csv-Datei nicht gefunden oder besitzt nicht genug Rechte."
+
+#: kfzcheck.py:164
+msgid "No matches found"
+msgstr "Keine Übereinstimmungen gefunden"
+
+#: kfzcheck.py:216
+msgid ""
+"KFZcheck searches for kfz license plates shortcuts and citys / regions. "
+"Uppercase searches for all license plates starting with your search. "
+"Lowercase matches exactly for the license plates and searches after the "
+"city / region if no license plate exists."
+msgstr ""
+"KFZcheck sucht nach KFZ-Kennzeichen und Städten / Regionen."
+" Großschreibung sucht nach Kennzeichen die mit der Suche beginnen."
+" Kleinschreibung prüft auf das Kennzeichen, wenn kein Kennzeichen"
+" gefunden wurde, wird nach Stadt / Region gesucht."
+
+#: kfzcheck.py:257
+msgid "KFZcheck"
+msgstr "KFZcheck"
+
+#: kfzcheck.py:276
+msgid "license plate or cityname..."
+msgstr "KFZ-Kennzeichen oder Stadtname"
+
+#: kfzcheck.py:279
+msgid "Top"
+msgstr "Anfang"
+
+#: kfzcheck.py:285
+msgid "Middle"
+msgstr "Mitte"
+
+#: kfzcheck.py:291
+msgid "Bottom"
+msgstr "Ende"
+
+#: kfzcheck.py:300
+msgid "Country"
+msgstr "Land"
+
+#: kfzcheck.py:310
+msgid "About"
+msgstr "Über"
