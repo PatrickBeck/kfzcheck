@@ -26,6 +26,9 @@
       <property name="locale">
        <locale language="English" country="UnitedStates"/>
       </property>
+      <property name="viewMode">
+       <enum>QListView::ListMode</enum>
+      </property>
      </widget>
     </item>
     <item>
@@ -117,6 +120,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="wappen.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Sun Aug  1 15:46:03 2010
+# Created: Thu Aug  5 21:34:38 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -21,6 +21,7 @@ class Ui_KFZcheck(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.listfield = QtGui.QListWidget(self.mainwidget)
         self.listfield.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
+        self.listfield.setViewMode(QtGui.QListView.ListMode)
         self.listfield.setObjectName("listfield")
         self.verticalLayout.addWidget(self.listfield)
         self.searchfield = QtGui.QLineEdit(self.mainwidget)

@@ -3,15 +3,14 @@
 '''
 Filename: kfzcheck_qt.py
 Version: 0.0.1
-last change: 2010-07-31
-Function: KFZcheck is a small program written in python and uses the gtk toolkit. 
+last change: 2010-08-1
+Function: KFZcheck is a small program written in python and uses the Qt toolkit. 
 It searches for car (in german kfz) license plates shortcuts and the citys according to the 
 searchword - german example: S for Stuttgart. 
 
 Copyright (C) 2010 Patrick Beck <pbeck at yourse dot de>  
 
-I have to thanks Bartholomäus Wloka for the created austrian and poland country package and his 
-help to find a bug with the picture creation and the improvement of the search engine :)
+I have to thanks Bartholomäus Wloka for the created austrian and poland country package
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,12 +31,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from PyQt4 import * # for using on the pc
 from PyQt4.QtCore import * # for using on the pc 
 from PyQt4.QtGui import * # for using on the pc
+
+import signal
+signal.signal(signal.SIGINT, signal.SIG_DFL) # to destroy the app with ctrl-c
+
 import sys
 import csv
 import re
 import os
 import gettext
 from gui import Ui_KFZcheck
+import wappen
 
 
 APP = 'kfzcheck' # get i18n support - english and german
@@ -57,7 +61,7 @@ class KFZcheck(QMainWindow):
         QWidget.__init__(self, parent)
         self.ui = Ui_KFZcheck()
         self.ui.setupUi(self)
-        QObject.connect(self.ui.searchfield, SIGNAL("returnPressed()"), self.searching)
+        QObject.connect(self.ui.searchfield, SIGNAL("textChanged(QString)"), self.searching)
 
     def load(self, kfzlist):
         csvfile = '%s/kfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist) 
@@ -77,24 +81,29 @@ class KFZcheck(QMainWindow):
         self.ui.listfield.clear()
         text = str(self.ui.searchfield.text())
         for i in self.listfield_list:
-            if i[0].startswith(text):
+            if i[0].startswith(text): # when uppercase writing show all license plates that starts with searchtext
                 self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
             else:
-                if text.islower():
-                    if i[0].lower() == text.lower():
-                        self.ui.listfield.clear()
+                if text.islower(): # lowercase writing
+                    if text.lower() == i[0].lower(): # if the license plate matches exactly
+                        self.ui.listfield.clear() # show only the right
                         self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
-                        break
+                        break # and break the loop after it
 
                     else: 
-                        if i[1].lower().startswith(text.lower()):
+                        if i[1].lower().startswith(text.lower()): # lowercase, search after the city
                             self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
-                
+
+        if self.ui.listfield.count() == 0: # check if no items in list
+            self.addItemstoList('No matches found') # add a descriptions text 
                 
     def addItemstoList(self, textToadd):
         newItem = QListWidgetItem()
         newItem.setText(textToadd)
-        self.ui.listfield.insertItem(0, newItem)
+        icon = QIcon.addFile(QIcon(':wappen/de/BRD.png'), QSize(), QIcon.Normal, QIcon.Off)
+        newItem.setIcon(icon)
+        self.ui.listfield.addItem(newItem)
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
