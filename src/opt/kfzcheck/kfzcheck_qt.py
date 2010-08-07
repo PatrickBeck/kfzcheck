@@ -41,8 +41,6 @@ import re
 import os
 import gettext
 from gui import Ui_KFZcheck
-import wappen
-
 
 APP = 'kfzcheck' # get i18n support - english and german
 DIR = '/home/pbeck/kfzcheck_devel/src/opt/kfzcheck/locale'
@@ -62,7 +60,16 @@ class KFZcheck(QMainWindow):
         QWidget.__init__(self, parent)
         self.ui = Ui_KFZcheck() # load the qt-designer generated gui file
         self.ui.setupUi(self)
-        QObject.connect(self.ui.searchfield, SIGNAL("textChanged(QString)"), self.searching) # call the searching function on every text change - on the fly search
+        QObject.connect(self.ui.searchfield, SIGNAL('textChanged(QString)'), self.searching) # call the searching function on every text change - on the fly search
+        
+        self.qa = QActionGroup(None)
+        self.qa.addAction(self.ui.actionTop)
+        self.qa.addAction(self.ui.actionMiddle)
+        self.qa.addAction(self.ui.actionBottom)
+        QObject.connect(self.ui.actionTop, SIGNAL('triggered()'), self.filterTop)
+        QObject.connect(self.ui.actionMiddle, SIGNAL('triggered()'), self.filterMiddle)
+        QObject.connect(self.ui.actionBottom, SIGNAL('triggered()'), self.filterBottom)
+
 
     def load(self, kfzlist):
         csvfile = '%s/kfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist) 
@@ -124,11 +131,19 @@ class KFZcheck(QMainWindow):
         
         self.ui.listfield.addItem(newItem) # add the item to the QlistWidget
         
+    def filterTop(self):
+#        self.ui.listfield.scrollToItem()
+        
+    def filterMiddle(self):
+#        self.selector.set_active(0, self.count_rows/2)
+        
+    def filterBottom(self):
+#        self.selector.set_active(0, self.count_rows-1)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     kfzcheck = KFZcheck()
-    kfzcheck.load('pl') # has to be replaced with a gui to select
+    kfzcheck.load('de') # has to be replaced with a gui to select
     kfzcheck.show()
     sys.exit(app.exec_())
 

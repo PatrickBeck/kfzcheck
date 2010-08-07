@@ -23,8 +23,14 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QListWidget" name="listfield">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
       <property name="locale">
        <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
       </property>
       <property name="viewMode">
        <enum>QListView::ListMode</enum>
@@ -50,6 +56,9 @@
       </property>
       <property name="locale">
        <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNoAutoUppercase</set>
       </property>
       <property name="inputMask">
        <string/>
@@ -120,8 +129,6 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="wappen.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
