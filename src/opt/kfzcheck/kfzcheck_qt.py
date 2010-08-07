@@ -56,12 +56,13 @@ class KFZcheck(QMainWindow):
     kfzcheck_dir = '/home/pbeck/kfzcheck_devel/src/opt/kfzcheck/'
     kfzcheck_ini = os.path.expanduser('~/.kfzcheck.ini') # configuration file for the country selection
     listfield_list = []
+    country = 'de' # has to be replaced with a gui
 
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
-        self.ui = Ui_KFZcheck()
+        self.ui = Ui_KFZcheck() # load the qt-designer generated gui file
         self.ui.setupUi(self)
-        QObject.connect(self.ui.searchfield, SIGNAL("textChanged(QString)"), self.searching)
+        QObject.connect(self.ui.searchfield, SIGNAL("textChanged(QString)"), self.searching) # call the searching function on every text change - on the fly search
 
     def load(self, kfzlist):
         csvfile = '%s/kfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist) 
@@ -72,43 +73,62 @@ class KFZcheck(QMainWindow):
         
         for i in file:
             i[0] = unicode(i[0], 'utf-8') # listfield_list is unicode, too. When i append the item.
-            i[1] = unicode(i[1], 'utf-8')  
-            i[2] = unicode(i[2], 'utf-8')
-            self.listfield_list.append(i)
-            self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
+            i[1] = unicode(i[1], 'utf-8')
 
+            if len(i) == 3: # check if the csv file has 3 values
+                i[2] = unicode(i[2], 'utf-8')
+                self.listfield_list.append(i)
+                self.addItemstoList('%s, %s\n%s' % (i[0], i[1], i[2]))
+            else:
+                self.listfield_list.append(i)
+                self.addItemstoList('%s, %s' % (i[0], i[1])) # when only 2 values in the csv files
+                
     def searching(self):
         self.ui.listfield.clear()
         text = str(self.ui.searchfield.text())
         for i in self.listfield_list:
             if i[0].startswith(text): # when uppercase writing show all license plates that starts with searchtext
-                self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
+                if len(i) == 3:
+                    self.addItemstoList('%s, %s\n%s' % (i[0], i[1], i[2]))
+                else:
+                    self.addItemstoList('%s, %s' % (i[0], i[1]))
             else:
                 if text.islower(): # lowercase writing
                     if text.lower() == i[0].lower(): # if the license plate matches exactly
                         self.ui.listfield.clear() # show only the right
-                        self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
+                        if len(i) == 3:
+                            self.addItemstoList('%s, %s\n%s' % (i[0], i[1], i[2]))
+                        else:
+                            self.addItemstoList('%s, %s' % (i[0], i[1]))
                         break # and break the loop after it
 
                     else: 
                         if i[1].lower().startswith(text.lower()): # lowercase, search after the city
-                            self.addItemstoList(i[0] + ', ' + i[1] + ' ' + '\n' + i[2])
-
+                            if len(i) == 3:
+                                self.addItemstoList('%s, %s\n%s' % (i[0], i[1], i[2]))
+                            else:
+                                self.addItemstoList('%s, %s' % (i[0], i[1]))
+        
         if self.ui.listfield.count() == 0: # check if no items in list
             self.addItemstoList('No matches found') # add a descriptions text 
                 
     def addItemstoList(self, textToadd):
         newItem = QListWidgetItem()
         newItem.setText(textToadd)
-        icon = QIcon.addFile(QIcon(':wappen/de/BRD.png'), QSize(), QIcon.Normal, QIcon.Off)
-        newItem.setIcon(icon)
-        self.ui.listfield.addItem(newItem)
+        textToAddList = textToadd.splitlines()
+
+        if len(textToAddList) == 2: # when two lines - the state is always on a newline - check if a image exists - it's not a problem when no image exists
+            textIcon = textToAddList[1] # get the name of the image
+            icon = QIcon('%s/wappen/%s/%s.png' % (self.kfzcheck_dir, self.country, textIcon)) # set it as Qicon
+            newItem.setIcon(icon) # and add it to the newItem
+        
+        self.ui.listfield.addItem(newItem) # add the item to the QlistWidget
         
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     kfzcheck = KFZcheck()
-    kfzcheck.load('de')     
+    kfzcheck.load('pl') # has to be replaced with a gui to select
     kfzcheck.show()
     sys.exit(app.exec_())
 
