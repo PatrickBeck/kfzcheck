@@ -44,18 +44,15 @@ import gettext
 import ConfigParser
 from gui import Ui_KFZcheck
 
-APP = 'kfzcheck' # get i18n support - english and german
-DIR = '/home/pbeck/kfzcheck_devel/src/opt/kfzcheck/locale'
-
-gettext.bindtextdomain(APP, DIR)
-gettext.textdomain(APP)
-_ = gettext.gettext
-
 class KFZcheck(QMainWindow):
 
-    kfzcheck_dir = '/home/pbeck/kfzcheck_devel/src/opt/kfzcheck/'
-    listfield_list = []
+    workingDir = os.getcwd() # get the current directory
+    appName = sys.argv[0].split('/')[-1] # get the application name
+    pathToFile = sys.argv[0].rstrip(appName) # extract the path from the current dir to the app - and exclude the application name
+    kfzcheck_dir = '%s/%s' % (workingDir, pathToFile) # create the absolute path to the application dir
 
+    listfield_list = [] # data for searching
+    
     Config = ConfigParser.ConfigParser()
     kfzcheck_ini = os.path.expanduser('~/.kfzcheck.ini') # configuration file for the country selection
     if os.path.isfile(kfzcheck_ini) == False: # when the ini file not exists create it in ~./.kfzcheck.ini
@@ -111,6 +108,7 @@ class KFZcheck(QMainWindow):
             self.ui.searchfield.hide() # no searchoption - the message will be stay on the screen
     
     def loadCountry(self):
+        self.ui.searchfield.setText(QString(''))
         self.listfield_list = [] # clear the searching list from the old entries
         self.ui.listfield.clear() # clear the ui from the old entries
         selected_country = self.countryfield.currentItem().text()
@@ -119,12 +117,12 @@ class KFZcheck(QMainWindow):
         ini_file = open(self.kfzcheck_ini, 'w') # open the file
         self.Config.write(ini_file) # write and save it
         ini_file.close # close the ini file
-
+        
         self.load(selected_country)
             
     def searching(self):
         self.ui.listfield.clear()
-        text = str(self.ui.searchfield.text())
+        text = unicode(self.ui.searchfield.text()) # a QString is not as nice as unicode :)
         for i in self.listfield_list:
             if i[0].startswith(text): # when uppercase writing show all license plates that starts with searchtext
                 if len(i) == 3:
@@ -182,7 +180,9 @@ class KFZcheck(QMainWindow):
  
 Uppercase searches for all license plates starting with your search. Lowercase matches exactly for the license plates and searches after the city / region, if no license plate exists.
 
-Website: http://wiki.yourse.de/doku.php?id=python:kfzcheck
+It's possible to use other data sources (numbers, city codes, etc.) visit the website.
+
+Website: http://kfzcheck.yourse.de
 Feedback is welcome at pbeck@yourse.de'''
         QMessageBox.about(None, 'About', text)
 
