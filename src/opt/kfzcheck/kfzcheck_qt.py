@@ -83,7 +83,7 @@ class KFZcheck(QMainWindow):
         QObject.connect(self.ui.actionBottom, SIGNAL('triggered()'), self.filterBottom)
         QObject.connect(self.ui.actionAbout, SIGNAL('triggered()'), self.about)
         QObject.connect(self.ui.actionCountry, SIGNAL('triggered()'), self.countrySelector)
-        QObject.connect(self.countryfield, SIGNAL('itemActivated(QListWidgetItem*)'), self.loadCountry)
+        QObject.connect(self.countryfield, SIGNAL('itemPressed(QListWidgetItem*)'), self.loadCountry)
 
         self.load(self.firstload)
 
@@ -118,7 +118,9 @@ class KFZcheck(QMainWindow):
         self.Config.write(ini_file) # write and save it
         ini_file.close # close the ini file
         
-        self.load(selected_country)
+        self.countryfield.hide() # hide the country selector after pressing the next file to load
+        self.countryfield.clear() # delete the content of the selector - or it will be twice in the field
+        self.load(selected_country) # load the csv file
             
     def searching(self):
         self.ui.listfield.clear()
@@ -164,16 +166,22 @@ class KFZcheck(QMainWindow):
         self.ui.listfield.addItem(newItem) # add the item to the QlistWidget
         
     def filterTop(self):
-        pass
-#        self.ui.listfield.scrollToItem()
-        
+        self.ui.listfield.setCurrentRow(0) # jump to the top
+        self.ui.listfield.setCurrentRow(1) # It's not possible to jump into a selected area twice, 
+                                           # this happens when you scroll manually down with a scrollbar - so we have to change it
+        self.ui.listfield.clearSelection() # no selection should be visible
+
     def filterMiddle(self):
-        pass
-#        self.selector.set_active(0, self.count_rows/2)
+        rows = self.ui.listfield.count()
+        self.ui.listfield.setCurrentRow(rows/2) # jump to the middle
+        self.ui.listfield.setCurrentRow(rows/2-1)
+        self.ui.listfield.clearSelection() # no selection should be visible
         
     def filterBottom(self):
-        pass
-#        self.selector.set_active(0, self.count_rows-1)
+        rows = self.ui.listfield.count()
+        self.ui.listfield.setCurrentRow(rows-1) # jump to the end (-1 because it count from 0)
+        self.ui.listfield.setCurrentRow(rows-2) # 
+        self.ui.listfield.clearSelection() # no selection should be visible
 
     def about(self):
         text = '''KFZcheck searches for kfz license plates shortcuts and citys / regions.
