@@ -35,6 +35,12 @@
       <property name="selectionMode">
        <enum>QAbstractItemView::SingleSelection</enum>
       </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
       <property name="viewMode">
        <enum>QListView::ListMode</enum>
       </property>
@@ -99,7 +105,7 @@
   </widget>
   <action name="actionMiddle">
    <property name="checkable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Middle</string>
@@ -107,7 +113,7 @@
   </action>
   <action name="actionTop">
    <property name="checkable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Top</string>
@@ -115,7 +121,7 @@
   </action>
   <action name="actionBottom">
    <property name="checkable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Bottom</string>

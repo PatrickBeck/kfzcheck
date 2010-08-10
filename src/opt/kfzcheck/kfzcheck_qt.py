@@ -37,6 +37,7 @@ import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL) # to destroy the app with ctrl-c
 
 import sys
+import locale
 import csv
 import re
 import os
@@ -69,7 +70,11 @@ class KFZcheck(QMainWindow):
         QWidget.__init__(self, parent)
         self.ui = Ui_KFZcheck() # load the qt-designer generated gui file
         self.ui.setupUi(self)
-        
+
+        translator = QTranslator(app) # translation       
+        translator.load('%slocale/%s.qm' % (self.kfzcheck_dir, locale.getlocale()[0])) # all files in locale/ as language code de_DE.qm as example
+        app.installTranslator(translator) # use the file if the language exists
+
         self.countryfield = QListWidget() # for the country selector
         
         self.qa = QActionGroup(None)
@@ -88,7 +93,7 @@ class KFZcheck(QMainWindow):
         self.load(self.firstload)
 
     def load(self, kfzlist):
-        csvfile = '%s/kfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist) 
+        csvfile = '%skfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist)
         try:
             file = csv.reader(open(csvfile), delimiter=',') # parse the csv file
         
@@ -104,7 +109,7 @@ class KFZcheck(QMainWindow):
                     self.listfield_list.append(i)
                     self.addItemstoList('%s, %s' % (i[0], i[1])) # when only 2 values in the csv files
         except:
-            self.addItemstoList('csv file not found or has not enough rights.')
+            self.addItemstoList(self.tr("csv file not found or has not enough rights."))
             self.ui.searchfield.hide() # no searchoption - the message will be stay on the screen
     
     def loadCountry(self):
@@ -149,12 +154,12 @@ class KFZcheck(QMainWindow):
                                 self.addItemstoList('%s, %s' % (i[0], i[1]))
         
         if self.ui.listfield.count() == 0: # check if no items in list
-            self.addItemstoList('No matches found') # add a descriptions text 
+            self.addItemstoList(self.tr("No matches found")) # add a descriptions text 
                 
     def addItemstoList(self, textToadd):
         newItem = QListWidgetItem()
         newItem.setText(textToadd)
-        textToAddList = textToadd.splitlines()
+        textToAddList = unicode(textToadd).splitlines()
 
         if len(textToAddList) == 2: # when two lines - the state is always on a newline - check if a image exists - it's not a problem when no image exists
             textIcon = textToAddList[1] # get the name of the image
@@ -184,15 +189,14 @@ class KFZcheck(QMainWindow):
         self.ui.listfield.clearSelection() # no selection should be visible
 
     def about(self):
-        text = '''KFZcheck searches for kfz license plates shortcuts and citys / regions.
+        text = self.tr("""KFZcheck searches for kfz license plates shortcuts and citys / regions.
  
 Uppercase searches for all license plates starting with your search. Lowercase matches exactly for the license plates and searches after the city / region, if no license plate exists.
 
-It's possible to use other data sources (numbers, city codes, etc.) visit the website.
+It's possible to use other data sources (numbers, city codes, etc.) Visit the project website at http://kfzcheck.yourse.de.
 
-Website: http://kfzcheck.yourse.de
-Feedback is welcome at pbeck@yourse.de'''
-        QMessageBox.about(None, 'About', text)
+Feedback is welcome at pbeck@yourse.de""")
+        QMessageBox.about(None, self.tr("About"), text)
 
     def countrySelector(self):
         country_list = []

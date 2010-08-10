@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Mon Aug  9 22:44:13 2010
+# Created: Tue Aug 10 20:17:28 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -24,6 +24,7 @@ class Ui_KFZcheck(object):
         self.listfield.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.listfield.setAlternatingRowColors(True)
         self.listfield.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.listfield.setIconSize(QtCore.QSize(30, 30))
         self.listfield.setViewMode(QtGui.QListView.ListMode)
         self.listfield.setObjectName("listfield")
         self.verticalLayout.addWidget(self.listfield)
@@ -49,13 +50,13 @@ class Ui_KFZcheck(object):
         self.menuKFZcheck.setObjectName("menuKFZcheck")
         KFZcheck.setMenuBar(self.menubar)
         self.actionMiddle = QtGui.QAction(KFZcheck)
-        self.actionMiddle.setCheckable(True)
+        self.actionMiddle.setCheckable(False)
         self.actionMiddle.setObjectName("actionMiddle")
         self.actionTop = QtGui.QAction(KFZcheck)
-        self.actionTop.setCheckable(True)
+        self.actionTop.setCheckable(False)
         self.actionTop.setObjectName("actionTop")
         self.actionBottom = QtGui.QAction(KFZcheck)
-        self.actionBottom.setCheckable(True)
+        self.actionBottom.setCheckable(False)
         self.actionBottom.setObjectName("actionBottom")
         self.actionCountry = QtGui.QAction(KFZcheck)
         self.actionCountry.setObjectName("actionCountry")
