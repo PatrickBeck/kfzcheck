@@ -3,8 +3,8 @@
 
 '''
 Filename: kfzcheck_qt.py
-Version: 0.1
-last change: 2010-08-8
+Version: 0.2
+last change: 2010-08-11
 Function: KFZcheck is a small program written in python and uses the Qt toolkit. 
 It searches for car (in german kfz) license plates shortcuts and the citys according to the 
 searchword - german example: S for Stuttgart. 
@@ -46,7 +46,6 @@ import ConfigParser
 from gui import Ui_KFZcheck
 
 class KFZcheck(QMainWindow):
-
     workingDir = os.getcwd() # get the current directory
     appName = sys.argv[0].split('/')[-1] # get the application name
     pathToFile = sys.argv[0].rstrip(appName) # extract the path from the current dir to the app - and exclude the application name
@@ -67,17 +66,21 @@ class KFZcheck(QMainWindow):
     firstload = Config.get('Country', 'firstload') # load the country that specified in the configuration file
 
     def __init__(self, parent=None):
+        translator = QTranslator(app) # translation       
+        translator.load('%slocale/%s.qm' % (self.kfzcheck_dir, locale.getlocale()[0])) # all files in locale/ as language code de_DE.qm as example
+        app.installTranslator(translator) # use the file if the language exists
+        
         QWidget.__init__(self, parent)
         self.ui = Ui_KFZcheck() # load the qt-designer generated gui file
         self.ui.setupUi(self)
 
-        translator = QTranslator(app) # translation       
-        translator.load('%slocale/%s.qm' % (self.kfzcheck_dir, locale.getlocale()[0])) # all files in locale/ as language code de_DE.qm as example
-        app.installTranslator(translator) # use the file if the language exists
+        self.countrybox = QDialog() # create a dialog for the country selector
+        self.countrybox.setFixedHeight(350) # it's not the best way ...
+        self.countryvertical = QVBoxLayout(self.countrybox) # create a vertical layout - full width of the screen
+        self.countryfield = QListWidget(self.countrybox) # for the country selector
+        self.countryvertical.addWidget(self.countryfield) # full witdh for the listwidget
 
-        self.countryfield = QListWidget() # for the country selector
-        
-        self.qa = QActionGroup(None)
+        self.qa = QActionGroup(self)
         self.qa.addAction(self.ui.actionTop)
         self.qa.addAction(self.ui.actionMiddle)
         self.qa.addAction(self.ui.actionBottom)
@@ -88,7 +91,7 @@ class KFZcheck(QMainWindow):
         QObject.connect(self.ui.actionBottom, SIGNAL('triggered()'), self.filterBottom)
         QObject.connect(self.ui.actionAbout, SIGNAL('triggered()'), self.about)
         QObject.connect(self.ui.actionCountry, SIGNAL('triggered()'), self.countrySelector)
-        QObject.connect(self.countryfield, SIGNAL('itemPressed(QListWidgetItem*)'), self.loadCountry)
+        QObject.connect(self.countryfield, SIGNAL('itemActivated(QListWidgetItem *)'), self.loadCountry)
 
         self.load(self.firstload)
 
@@ -108,9 +111,12 @@ class KFZcheck(QMainWindow):
                 else:
                     self.listfield_list.append(i)
                     self.addItemstoList('%s, %s' % (i[0], i[1])) # when only 2 values in the csv files
+        
         except:
             self.addItemstoList(self.tr("csv file not found or has not enough rights."))
             self.ui.searchfield.hide() # no searchoption - the message will be stay on the screen
+        
+        self.filterTop() # jump to the beginning after loading a new csv file 
     
     def loadCountry(self):
         self.ui.searchfield.setText(QString(''))
@@ -122,7 +128,8 @@ class KFZcheck(QMainWindow):
         ini_file = open(self.kfzcheck_ini, 'w') # open the file
         self.Config.write(ini_file) # write and save it
         ini_file.close # close the ini file
-        
+       
+        self.countrybox.hide() # hide the QDialog
         self.countryfield.hide() # hide the country selector after pressing the next file to load
         self.countryfield.clear() # delete the content of the selector - or it will be twice in the field
         self.load(selected_country) # load the csv file
@@ -210,7 +217,8 @@ Feedback is welcome at pbeck@yourse.de""")
             newCountry.setText(i)
             self.countryfield.addItem(newCountry)
 
-        self.countryfield.show()
+        self.countryfield.show() # the qlistwidget
+        self.countrybox.show() # the qdialog
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

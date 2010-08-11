@@ -11,10 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>KFZcheck</string>
+   <string notr="true">KFZcheck</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
+  </property>
+  <property name="windowFilePath">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="mainwidget">
    <property name="locale">
@@ -105,6 +108,9 @@
   </widget>
   <action name="actionMiddle">
    <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
     <bool>false</bool>
    </property>
    <property name="text">
@@ -113,6 +119,9 @@
   </action>
   <action name="actionTop">
    <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
     <bool>false</bool>
    </property>
    <property name="text">
@@ -121,6 +130,9 @@
   </action>
   <action name="actionBottom">
    <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
     <bool>false</bool>
    </property>
    <property name="text">

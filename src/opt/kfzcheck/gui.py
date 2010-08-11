@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Tue Aug 10 20:17:28 2010
+# Created: Wed Aug 11 22:24:47 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,7 +13,9 @@ class Ui_KFZcheck(object):
     def setupUi(self, KFZcheck):
         KFZcheck.setObjectName("KFZcheck")
         KFZcheck.resize(800, 454)
+        KFZcheck.setWindowTitle("KFZcheck")
         KFZcheck.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
+        KFZcheck.setWindowFilePath("None")
         self.mainwidget = QtGui.QWidget(KFZcheck)
         self.mainwidget.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.mainwidget.setObjectName("mainwidget")
@@ -50,13 +52,16 @@ class Ui_KFZcheck(object):
         self.menuKFZcheck.setObjectName("menuKFZcheck")
         KFZcheck.setMenuBar(self.menubar)
         self.actionMiddle = QtGui.QAction(KFZcheck)
-        self.actionMiddle.setCheckable(False)
+        self.actionMiddle.setCheckable(True)
+        self.actionMiddle.setChecked(False)
         self.actionMiddle.setObjectName("actionMiddle")
         self.actionTop = QtGui.QAction(KFZcheck)
-        self.actionTop.setCheckable(False)
+        self.actionTop.setCheckable(True)
+        self.actionTop.setChecked(False)
         self.actionTop.setObjectName("actionTop")
         self.actionBottom = QtGui.QAction(KFZcheck)
-        self.actionBottom.setCheckable(False)
+        self.actionBottom.setCheckable(True)
+        self.actionBottom.setChecked(False)
         self.actionBottom.setObjectName("actionBottom")
         self.actionCountry = QtGui.QAction(KFZcheck)
         self.actionCountry.setObjectName("actionCountry")
@@ -73,7 +78,6 @@ class Ui_KFZcheck(object):
         QtCore.QMetaObject.connectSlotsByName(KFZcheck)
 
     def retranslateUi(self, KFZcheck):
-        KFZcheck.setWindowTitle(QtGui.QApplication.translate("KFZcheck", "KFZcheck", None, QtGui.QApplication.UnicodeUTF8))
         self.actionMiddle.setText(QtGui.QApplication.translate("KFZcheck", "Middle", None, QtGui.QApplication.UnicodeUTF8))
         self.actionTop.setText(QtGui.QApplication.translate("KFZcheck", "Top", None, QtGui.QApplication.UnicodeUTF8))
         self.actionBottom.setText(QtGui.QApplication.translate("KFZcheck", "Bottom", None, QtGui.QApplication.UnicodeUTF8))
