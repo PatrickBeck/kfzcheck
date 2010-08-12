@@ -1,4 +1,4 @@
-SOURCES = kfzcheck_qt.py \ 
+SOURCES = kfzcheck.py \ 
 
 FORMS = gui.ui \
 

@@ -24,17 +24,17 @@
         <translation>Land</translation>
     </message>
     <message>
-        <location filename="kfzcheck_qt.py" line="210"/>
+        <location filename="kfzcheck.py" line="208"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="kfzcheck_qt.py" line="117"/>
+        <location filename="kfzcheck.py" line="115"/>
         <source>csv file not found or has not enough rights.</source>
         <translation>csv Datei nicht gefunden oder besitzt nicht genügend Rechte.</translation>
     </message>
     <message>
-        <location filename="kfzcheck_qt.py" line="166"/>
+        <location filename="kfzcheck.py" line="164"/>
         <source>No matches found</source>
         <translation>Keine Übereinstimmungen gefunden</translation>
     </message>
@@ -56,12 +56,12 @@ Es ist möglich andere Datenquellen (Telefonnummern, Postleitzahlen, etc.) zu nu
 Feedback ist willkommen an pbeck@yourse.de</translation>
     </message>
     <message>
-        <location filename="kfzcheck_qt.py" line="78"/>
+        <location filename="kfzcheck.py" line="76"/>
         <source>Select country</source>
         <translation>Land auswählen</translation>
     </message>
     <message>
-        <location filename="kfzcheck_qt.py" line="201"/>
+        <location filename="kfzcheck.py" line="199"/>
         <source>&lt;p&gt;&lt;span style=&quot; font-size:30pt; text-decoration: bold; color:#ff5c00;&quot;&gt;KFZcheck&lt;/span&gt; searches for kfz license plates shortcuts and citys / regions.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;Uppercase&lt;/span&gt; searches for all license plates starting with your search. &lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;Lowercase&lt;/span&gt; matches exactly for the license plates and searches after the city / region, if no license plate exists.&lt;/p&gt;
 
@@ -70,7 +70,7 @@ Feedback ist willkommen an pbeck@yourse.de</translation>
 &lt;p&gt;Other data sources has the same search mechanism - look at the order.&lt;/p&gt;
 
 &lt;p&gt;Feedback is welcome at &lt;a href=&quot;mailto:pbeck@yourse.de&quot;&gt;&lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;pbeck@yourse.de&lt;/span&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;span style=&quot; font-size:30pt; text-decoration: bold; color:#ff5c00;&quot;&gt;KFZcheck&lt;/span&gt; sucht nach KFZ-Kennzeichen und Städten /Regionen.&lt;/p&gt;
+        <translation>&lt;p&gt;&lt;span style=&quot; font-size:30pt; text-decoration: bold; color:#ff5c00;&quot;&gt;KFZcheck&lt;/span&gt; sucht nach KFZ-Kennzeichen und Städten /Regionen.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;Großschreibung&lt;/span&gt; sucht nach Kennzeichen die mit der Suche beginnen. &lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;Kleinschreibung&lt;/span&gt; prüft direkt auf das Kennzeichen und sucht nach der Stadt / Region, wenn kein Kennzeichen gefunden wurde.&lt;/p&gt;
 
 &lt;p&gt;Es ist möglich andere Datenquellen (Telefonnummern, Postleitzahlen, etc.) zu nutzen. Besuche die Projekt-Website auf &lt;a href=&quot;http://kfzcheck.yourse.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#ff5c00;&quot;&gt;http://kfzcheck.yourse.de&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;

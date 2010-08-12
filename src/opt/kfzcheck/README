@@ -1,26 +1,51 @@
-KFZcheck.py 
+kfzcheck.py 
 ==========
-(c) Patrick Beck ( pbeck at yourse dot de )
 
-KFZcheck is a small program written in python and uses the gtk toolkit
+(c) Patrick Beck ( pbeck at yourse dot de )
+KFZcheck is licensed under the GPL3 license
+
+==== About ====
+
+KFZcheck is a small program written in python and uses the Qt toolkit
 It searches for car (in german kfz) license plates shortcuts and the citys according to 
 the searchword - german example: S for Stuttgart. A german, austrian, swiss and poland license plate
 list is till now included.
 
-KFZcheck searches automaticlly for csv files in /opt/kfzcheck/kfzlist/. The files should be
+KFZcheck searches automatically for csv files in "/opt/kfzcheck/kfzlist/". The files should be
 named with the country code => Example de.csv for germany.
 
 The ~/.kfzcheck.ini saves the last selected country so you can load your favorite first :) It will
 be set automaticly when you change the country in the gui.
 
+==== Creating a own csv file ====
+
+It's possible to create own csv files with any content you like => numbers, post codes, etc.
+You have only to look that the file has at least two and at most three entrys.
+
+=== German file strutur - de.csv ===
+
 The german file structur is for example => S,Stuttgart,Baden-Württemberg
 S is the car license plate shortcut, Stuttgart the according city to the shortcut and Baden-Württemberg
 stands for a province (a state in state).
 
-When emblems should be displayed you have to create a folder in /opt/kfzcheck/wappen/ with the countrycode as name.
-In the folder you can save the differend emblems. They have to be png files with the exactly name of the province (it's casesensitive).
+=== Display emblems ===
 
-When you have created a country pack i am interested to integrate it in the offical release - please mail me :)
+When emblems should be displayed you have to create a folder in /opt/kfzcheck/wappen/ with the csv filename.
+In the folder you can save the differend emblems. They have to be .png files with the exactly name of the 
+province (the third entry in the csv file). The search after the icons is casesensitive.
 
-KFZcheck is licensed under the GPL3 license
+==== Developer information  ====
+
+Useful information for pyqt. When you use the designer to create your ui you can translate it with "pyuic gui.ui -o gui.py"
+For language translation you have to add the language file (de_DE.ts for example) to "translate.pro" and call it with
+"pylupdate4 translate.pro". The language file will be created in the "locale" folder. The easiest way is to edit the files with
+qt linguist. It's a graphical user interface for translation. After the translation you have to release the file (create the *.qm file)
+in the File dialog.
+
+==== Feedback ====
+
+Any feedback or when you have created a country pack, numbers, post code, any other useful csv file or a translation, 
+i'am interested to integrate it in the offical release - please mail me at pbeck@yourse.de :)
+
+
 
