@@ -40,8 +40,8 @@
       </property>
       <property name="iconSize">
        <size>
-        <width>30</width>
-        <height>30</height>
+        <width>60</width>
+        <height>60</height>
        </size>
       </property>
       <property name="viewMode">
