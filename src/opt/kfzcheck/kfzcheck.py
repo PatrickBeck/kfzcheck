@@ -37,9 +37,7 @@ signal.signal(signal.SIGINT, signal.SIG_DFL) # to destroy the app with ctrl-c
 import sys
 import locale
 import csv
-import re
 import os
-import gettext
 import ConfigParser
 from gui import Ui_KFZcheck
 
