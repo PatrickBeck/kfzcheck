@@ -22,7 +22,7 @@ if __name__ == "__main__":
 A german, austrian, swiss and poland list is included"""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
-     p.depends = "python2.5, python2.5-gtk2"
+     p.depends = "python2.5, python2.5-qt4-common"
      p.section="user/utilities"
      p.icon = "/home/user/MyDocs/development/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
      p.arch="all"                #should be all for python, any for all arch
