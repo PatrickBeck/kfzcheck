@@ -109,6 +109,7 @@ class KFZcheck(QMainWindow):
                     self.listfield_list.append(i)
                     self.addItemstoList('%s, %s' % (i[0], i[1])) # when only 2 values in the csv files
         
+            self.ui.searchfield.show() # when no csv file found at the first start and you change the country - the searchfield should be displayed
         except:
             self.addItemstoList(self.tr("csv file not found or has not enough rights."))
             self.ui.searchfield.hide() # no searchoption - the message will be stay on the screen

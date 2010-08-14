@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Thu Aug 12 21:34:53 2010
+# Created: Sat Aug 14 11:36:13 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -28,6 +28,7 @@ class Ui_KFZcheck(object):
         self.listfield.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         self.listfield.setIconSize(QtCore.QSize(60, 60))
         self.listfield.setViewMode(QtGui.QListView.ListMode)
+        self.listfield.setWordWrap(True)
         self.listfield.setObjectName("listfield")
         self.verticalLayout.addWidget(self.listfield)
         self.searchfield = QtGui.QLineEdit(self.mainwidget)
