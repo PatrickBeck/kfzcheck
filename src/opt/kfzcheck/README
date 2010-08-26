@@ -4,6 +4,14 @@ kfzcheck.py
 (c) Patrick Beck ( pbeck at yourse dot de )
 KFZcheck is licensed under the GPL3 license
 
+Thanks to all contributors :) For new Datasets, Bug reports and all helping hands :) 
+
+Bartholomäus Wloka
+treofant
+Daniel Fett
+Bernd Abel
+Olaf Schulz
+
 ==== About ====
 
 KFZcheck is a small program written in python and uses the Qt toolkit

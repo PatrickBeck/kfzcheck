@@ -11,7 +11,7 @@ searchword - german example: S for Stuttgart.
 
 Copyright (C) 2010 Patrick Beck <pbeck at yourse dot de>  
 
-I have to thanks Bartholomäus Wloka for the created austrian and poland country package
+Thanks to all contributors :) A list is in the README file :)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

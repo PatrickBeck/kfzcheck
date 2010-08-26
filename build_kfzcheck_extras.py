@@ -18,9 +18,7 @@ if __name__ == "__main__":
          pass
      print
      p=py2deb.Py2deb("kfzcheck-extras")   #This is the package name and MUST be in lowercase! (using e.g. "mClock" fails miserably...)
-     p.description="""KFZcheck-extras is a package with other useful lists with interesting information for KFZcheck. 
-It's extended the lists of the KFZcheck application, thats only delivered with license plates lists. Till now the following lists are included - please help me to add new interessting information :)
-
+     p.description="""KFZcheck-extras is a package with other useful lists with interesting information for KFZcheck.\nIt's extended the lists of the KFZcheck application, thats only delivered with license plates lists. Till now the following lists are included - please help me to add new interessting information.
 E-Numbers (ingredient in food), Molkereien_de (german dairy companys with name out of a number), iso codes (german version), top level domains, iata airport codes."""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"

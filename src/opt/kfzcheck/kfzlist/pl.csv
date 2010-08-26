@@ -10,9 +10,9 @@ ZBI,Białogard,Zachodniopomorskie
 BIA,Białystok (region),Podlaskie
 BI,Białystok (miasto),Podlaskie
 BBI,Bielsk Podlaski,Podlaskie
-SBI,Bielsko-Biała (region),Pomorskie
-SB,Bielsko-Biała (miasto),Pomorskie
-SBL,Bieruńsko-Lędziński (Bieruń),Pomorskie
+SBI,Bielsko-Biała (region),Śląskie
+SB,Bielsko-Biała (miasto),Śląskie
+SBL,Bieruńsko-Lędziński (Bieruń),Śląskie
 RBI,Bieszczadzki (Ustrzyki Dolne),Podkarpackie
 LBL,Biłgoraj,Lubelskie
 KBC,Bochnia,Małopolskie
@@ -26,27 +26,27 @@ RBR,Brzozów,Podkarpackie
 TBU,Busko-Zdrój,Świętokrzyskie
 CBY,Bydgoszcz (region),Kujawsko-Pomorskie
 CB,Bydgoszcz (miasto),Kujawsko-Pomorskie
-SY,Bytom,Pomorskie
+SY,Bytom,Śląskie
 GBY,Bytów,Pomorskie
-SBE,Będzin,Pomorskie
+SBE,Będzin,Śląskie
 LCH,Chełm (region),Lubelskie
 LC,Chełm (miasto),Lubelskie
 CCH,Chełmno,Kujawsko-Pomorskie
 PCH,Chodzież,Wielkopolskie
 GCH,Chojnice,Pomorskie
-SH,Chorzów,Pomorskie
+SH,Chorzów,Śląskie
 ZCH,Choszczno,Zachodniopomorskie
 KCH,Chrzanów,Małopolskie
 WCI,Ciechanów,Mazowieckie
-SCI,Cieszyn,Pomorskie
+SCI,Cieszyn,Śląskie
 PCT,Czarnkowsko-Trzcianecki (Czarnków),Wielkopolskie
-SCZ,Częstochowa (region),Pomorskie
-SC,Częstochowa (miasto),Pomorskie
+SCZ,Częstochowa (region),Śląskie
+SC,Częstochowa (miasto),Śląskie
 GCZ,Człuchów,Pomorskie
 ZDR,Drawsko Pomorskie,Zachodniopomorskie
 NDZ,Działdowo,Warmińsko-Mazurskie
 DDZ,Dzierżoniów,Dolnośląskie
-SD,Dąbrowa Górnicza,Pomorskie
+SD,Dąbrowa Górnicza,Śląskie
 KDA,Dąbrowa Tarnowska,Małopolskie
 RDE,Dębica,Podkarpackie
 NEB,Elbląg (region),Warmińsko-Mazurskie
@@ -57,8 +57,8 @@ GDA,Gdańsk (region) (Pruszcz Gdański),Pomorskie
 GD,Gdańsk (miasto),Pomorskie
 GA,Gdynia,Pomorskie
 NGI,Giżycko,Warmińsko-Mazurskie
-SGL,Gliwice (region),Pomorskie
-SG,Gliwice (miasto),Pomorskie
+SGL,Gliwice (region),Śląskie
+SG,Gliwice (miasto),Śląskie
 PGN,Gniezno,Wielkopolskie
 ZGL,Goleniów,Zachodniopomorskie
 CGD,Golub-Dobrzyń,Kujawsko-Pomorskie
@@ -87,10 +87,10 @@ NIL,Iława,Warmińsko-Mazurskie
 LJA,Janów Lubelski,Lubelskie
 PJA,Jarocin,Wielkopolskie
 RJA,Jarosław,Podkarpackie
-SJZ,Jastrzębie-Zdrój,Pomorskie
+SJZ,Jastrzębie-Zdrój,Śląskie
 RJS,Jasło,Podkarpackie
 DJA,Jawor,Dolnośląskie
-SJ,Jaworzno,Pomorskie
+SJ,Jaworzno,Śląskie
 DJE,Jelenia Góra (region),Dolnośląskie
 DJ,Jelenia Góra (miasto),Dolnośląskie
 TJE,Jędrzejów,Świętokrzyskie
@@ -99,7 +99,7 @@ PK,Kalisz (miasto),Wielkopolskie
 DKA,Kamienna Góra,Dolnośląskie
 ZKA,Kamień Pomorski,Zachodniopomorskie
 GKA,Kartuzy,Pomorskie
-SK,Katowice,Pomorskie
+SK,Katowice,Śląskie
 TKA,Kazimierza Wielka,Świętokrzyskie
 TKI,Kielce (region),Świętokrzyskie
 TK,Kielce (miasto),Świętokrzyskie
@@ -130,7 +130,7 @@ GKW,Kwidzyn,Pomorskie
 OK,Kędzierzyn-Koźle,Opolskie
 PKE,Kępno,Wielkopolskie
 NKE,Kętrzyn,Warmińsko-Mazurskie
-SKL,Kłobuck,Pomorskie
+SKL,Kłobuck,Śląskie
 DKL,Kłodzko,Dolnośląskie
 WL,Legionowo,Mazowieckie
 DLE,Legnica (region),Dolnośląskie
@@ -148,7 +148,7 @@ DLB,Lubań,Dolnośląskie
 DLU,Lubin,Dolnośląskie
 LUB,Lublin (region),Lubelskie
 LU,Lublin (miasto),Lubelskie
-SLU,Lubliniec,Pomorskie
+SLU,Lubliniec,Śląskie
 DLW,Lwówek Śląski,Dolnośląskie
 GLE,Lębork,Pomorskie
 WMA,Maków Mazowiecki,Mazowieckie
@@ -156,7 +156,7 @@ GMB,Malbork,Pomorskie
 HPZ,Policja miastowa,Polska
 KMI,Miechów,Małopolskie
 RMI,Mielec,Podkarpackie
-SMI,Mikołów,Pomorskie
+SMI,Mikołów,Śląskie
 DMI,Milicz,Dolnośląskie
 U,Wojsko,Polska
 HB,Wojsko (MSWiA),Polska
@@ -166,8 +166,8 @@ WM,Mińsk Mazowiecki,Mazowieckie
 CMG,Mogilno,Kujawsko-Pomorskie
 BMN,Mońki,Podlaskie
 NMR,Mrągowo,Warmińsko-Mazurskie
-SMY,Myszków,Pomorskie
-SM,Mysłowice,Pomorskie
+SMY,Myszków,Śląskie
+SM,Mysłowice,Śląskie
 KMY,Myślenice,Małopolskie
 ZMY,Myślibórz,Zachodniopomorskie
 WML,Mława,Mazowieckie
@@ -210,7 +210,7 @@ EPA,Pabianice,Łódzkie
 EPJ,Pajęczno,Łódzkie
 LPA,Parczew,Lubelskie
 WPI,Piaseczno,Mazowieckie
-SPI,Piekary Śląskie,Pomorskie
+SPI,Piekary Śląskie,Śląskie
 EPI,Piotrków Trybunalski (region),Łódzkie
 EP,Piotrków Trybunalski (miasto),Łódzkie
 NPI,Pisz,Warmińsko-Mazurskie
@@ -249,7 +249,7 @@ RPR,Przemyśl (region),Podkarpackie
 RP,Przemyśl (miasto),Podkarpackie
 RPZ,Przeworsk,Podkarpackie
 WPY,Przysucha,Mazowieckie
-SPS,Pszczyna,Pomorskie
+SPS,Pszczyna,Śląskie
 GPU,Puck,Pomorskie
 LPU,Puławy,Lubelskie
 WPU,Pułtusk,Mazowieckie
@@ -257,7 +257,7 @@ ZPY,Pyrzyce,Zachodniopomorskie
 WPL,Płock (region),Mazowieckie
 WP,Płock (miasto),Mazowieckie
 WPN,Płońsk,Mazowieckie
-SRC,Racibórz,Pomorskie
+SRC,Racibórz,Śląskie
 WRA,Radom (region),Mazowieckie
 WR,Radom (miasto),Mazowieckie
 ERA,Radomsko,Łódzkie
@@ -266,9 +266,9 @@ LRA,Radzyń Podlaski,Lubelskie
 ERW,Rawa Mazowiecka,Łódzkie
 PRA,Rawicz,Wielkopolskie
 RRS,Ropczycko-Sędziszowski (Ropczyce),Podkarpackie
-SL,Ruda Śląska,Pomorskie
-SRB,Rybnik (region),Pomorskie
-SR,Rybnik (miasto),Pomorskie
+SL,Ruda Śląska,Śląskie
+SRB,Rybnik (region),Śląskie
+SR,Rybnik (miasto),Śląskie
 LRY,Ryki,Lubelskie
 CRY,Rypin,Kujawsko-Pomorskie
 RZE,Rzeszów (region),Podkarpackie
@@ -278,7 +278,7 @@ RSA,Sanok,Podkarpackie
 BSE,Sejny,Podlaskie
 WSI,Siedlce (region),Mazowieckie
 WS,Siedlce (miasto),Mazowieckie
-SI,Siemianowice Śląskie,Pomorskie
+SI,Siemianowice Śląskie,Śląskie
 BSI,Siemiatycze,Podlaskie
 ESI,Sieradz,Łódzkie
 WSE,Sierpc,Mazowieckie
@@ -289,7 +289,7 @@ WSC,Sochaczew,Mazowieckie
 WSK,Sokołów Podlaski,Mazowieckie
 BSK,Sokółka,Podlaskie
 GSP,Sopot,Pomorskie
-SO,Sosnowiec,Pomorskie
+SO,Sosnowiec,Śląskie
 RST,Stalowa Wola,Podkarpackie
 TST,Starachowice,Świętokrzyskie
 ZST,Stargard Szczeciński,Zachodniopomorskie
@@ -316,7 +316,7 @@ GSL,Słupsk (region),Pomorskie
 GS,Słupsk (miasto),Pomorskie
 RTA,Tamobrzeg (region),Podkarpackie
 RT,Tarnobrzeg (miasto),Podkarpackie
-STA,Tarnowskie Góry,Pomorskie
+STA,Tarnowskie Góry,Śląskie
 KTA,Tarnów (region),Małopolskie
 KT,Tarnów (miasto),Małopolskie
 KTT,Tatrzański (Zakopane),Małopolskie
@@ -328,7 +328,7 @@ CT,Toruń (miasto),Kujawsko-Pomorskie
 DTR,Trzebnica,Dolnośląskie
 CTU,Tuchola,Kujawsko-Pomorskie
 PTU,Turek,Wielkopolskie
-ST,Tychy (miasto),Pomorskie
+ST,Tychy (miasto),Śląskie
 KWA,Wadowice,Małopolskie
 WW-A,War.-Rembertów,Mazowieckie
 WW-W,War.-Wilanów,Mazowieckie
@@ -364,7 +364,7 @@ GWE,Wejherowo,Pomorskie
 KWI,Wieliczka,Małopolskie
 EWI,Wieluń,Łódzkie
 EWE,Wieruszów,Łódzkie
-SWD,Wodzisław Śląski,Pomorskie
+SWD,Wodzisław Śląski,Śląskie
 PWL,Wolsztyn,Wielkopolskie
 WWL,Wołomin (region),Mazowieckie
 WV,Wołomin (miasto),Mazowieckie
@@ -382,11 +382,11 @@ CWL,Włocławek (region),Kujawsko-Pomorskie
 CW,Włocławek (miasto),Kujawsko-Pomorskie
 LWL,Włodawa,Lubelskie
 TLW,Włoszczowa,Świętokrzyskie
-SZ,Zabrze,Pomorskie
+SZ,Zabrze,Śląskie
 BZA,Zambrów,Podlaskie
 LZA,Zamość (region),Lubelskie
 LZ,Zamość (miasto),Lubelskie
-SZA,Zawiercie,Pomorskie
+SZA,Zawiercie,Śląskie
 EZD,Zduńska Wola,Łódzkie
 EZG,Zgierz,Łódzkie
 DZG,Zgorzelec,Dolnośląskie
@@ -400,8 +400,8 @@ PZL,Złotów,Wielkopolskie
 PKO,wczesniej Konin (miasto) => PN,Wielkopolskie
 NOG,wczesniej Olecko-Gołdapski (Olecko) => NGO und NOE,Warmińsko-Mazurskie
 POZ,wczesniej Poznań (region) => PZ,Wielkopolskie
-SRS,wczesniej Ruda Śląska => SL,Pomorskie
-STY,wczesniej Tychy (region) => SBL,Pomorskie
+SRS,wczesniej Ruda Śląska => SL,Śląskie
+STY,wczesniej Tychy (region) => SBL,Śląskie
 ELA,Łask,Łódzkie
 RLA,Łańcut,Podkarpackie
 ZLO,Łobez,Zachodniopomorskie
@@ -423,11 +423,11 @@ ZSD,Świdwin,Zachodniopomorskie
 FSW,Świebodzin,Lubuskie
 CSW,Świecie,Kujawsko-Pomorskie
 ZSW,Świnoujście,Zachodniopomorskie
-SW,Świętochłowice,Pomorskie
+SW,Świętochłowice,Śląskie
 FZG,Żagań,Lubuskie
 FZA,Żary,Lubuskie
 CZN,Żnin,Kujawsko-Pomorskie
-SZO,Żory,Pomorskie
+SZO,Żory,Śląskie
 WZU,Żuromin,Mazowieckie
 WZY,Żyrardów,Mazowieckie
-SZY,Żywiec,Pomorskie
+SZY,Żywiec,Śląskie
