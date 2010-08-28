@@ -19,7 +19,12 @@ if __name__ == "__main__":
      print
      p=py2deb.Py2deb("kfzcheck-extras")   #This is the package name and MUST be in lowercase! (using e.g. "mClock" fails miserably...)
      p.description="""KFZcheck-extras is a package with other useful lists with interesting information for KFZcheck.\nIt's extended the lists of the KFZcheck application, thats only delivered with license plates lists. Till now the following lists are included - please help me to add new interessting information.
-E-Numbers (ingredient in food), Molkereien_de (german dairy companys with name out of a number), iso codes (german version), top level domains, iata airport codes."""
+
+E-Numbers - ingredients in food , 
+Molkereien_de - german dairy companys with name out of a number, 
+ISO codes - german version), 
+Top level domains, 
+IATA airport codes."""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
      p.depends = "kfzcheck"
@@ -41,7 +46,7 @@ E-Numbers (ingredient in food), Molkereien_de (german dairy companys with name o
      version = "0.1"           #Version of your software, e.g. "1.2.0" or "0.8.2"
      build = "0"                 #Build number, e.g. "1" for the first build of this version of your software. Increment for later re-builds of the same version of your software.
                                  #Text with changelog information to be displayed in the package "Details" tab of the Maemo Application Manager
-     changeloginformation = "First Release with some lists" 
+     changeloginformation = "First Release" 
      dir_name = "csvFiles"            #Name of the subfolder containing your package source files (e.g. usr\share\icons\hicolor\scalable\myappicon.svg, usr\lib\myapp\somelib.py). We suggest to leave it named src in all projects and will refer to that in the wiki article on maemo.org
      #Thanks to DareTheHair from talk.maemo.org for this snippet that recursively builds the file list 
      for root, dirs, files in os.walk(dir_name):

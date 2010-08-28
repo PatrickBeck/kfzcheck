@@ -1,9 +1,0 @@
-Package: kfzcheck
-Version: 2.0
-Section: user/utilities
-Priority: optional
-Architecture: all
-Essential: no
-Depends: python2.5, python2.5-qt4-common, 
-Maintainer: Patrick Beck <pbeck@yourse.de>
-Description: KFZcheck LP finder
