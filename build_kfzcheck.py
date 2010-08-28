@@ -24,7 +24,7 @@ A german, austrian, swiss and poland list is included"""
      p.mail="pbeck@yourse.de"
      p.depends = "python2.5, python2.5-qt4-common"
      p.section="user/utilities"
-     p.icon = "/home/user/MyDocs/development/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
+     p.icon = "/home/user/MyDocs/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
      p.arch="all"                #should be all for python, any for all arch
      p.urgency="low"             #not used in maemo onl for deb os
      p.distribution="fremantle"

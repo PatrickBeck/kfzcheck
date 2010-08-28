@@ -18,18 +18,12 @@ if __name__ == "__main__":
          pass
      print
      p=py2deb.Py2deb("kfzcheck-extras")   #This is the package name and MUST be in lowercase! (using e.g. "mClock" fails miserably...)
-     p.description="""KFZcheck-extras is a package with other useful lists with interesting information for KFZcheck.\nIt's extended the lists of the KFZcheck application, thats only delivered with license plates lists. Till now the following lists are included - please help me to add new interessting information.
-
-E-Numbers - ingredients in food , 
-Molkereien_de - german dairy companys with name out of a number, 
-ISO codes - german version), 
-Top level domains, 
-IATA airport codes."""
+     p.description="""KFZcheck-extras is a package with other useful lists with interesting information for KFZcheck.\nIt's extended the lists of the KFZcheck application, thats only delivered with license plates lists. Till now the following lists are included - please help me to add new interessting information.\nE-Numbers - ingredients in food,\nMolkereien_de - german dairy companys with name out of a number,\nISO codes - german version,\nTop level domains,\nIATA airport codes."""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
      p.depends = "kfzcheck"
      p.section="user/utilities"
-     p.icon = "/home/user/MyDocs/development/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
+     p.icon = "/home/user/MyDocs/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
      p.arch="all"                #should be all for python, any for all arch
      p.urgency="low"             #not used in maemo onl for deb os
      p.distribution="fremantle"
