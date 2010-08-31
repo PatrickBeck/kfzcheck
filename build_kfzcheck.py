@@ -22,7 +22,7 @@ if __name__ == "__main__":
 A german, austrian, swiss and poland list is included"""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
-     p.depends = "python2.5, python2.5-qt4-common"
+     p.depends = "python2.5, python2.5-qt4-common, python2.5-qt4-core, python2.5-qt4-gui"
      p.section="user/utilities"
      p.icon = "/home/user/MyDocs/kfzcheck_devel/src/usr/share/pixmaps/kfzcheck.png"
      p.arch="all"                #should be all for python, any for all arch
@@ -41,7 +41,7 @@ A german, austrian, swiss and poland list is included"""
      version = "2.1"           #Version of your software, e.g. "1.2.0" or "0.8.2"
      build = "1"                 #Build number, e.g. "1" for the first build of this version of your software. Increment for later re-builds of the same version of your software.
                                  #Text with changelog information to be displayed in the package "Details" tab of the Maemo Application Manager
-     changeloginformation = "README file, description and translation revised" 
+     changeloginformation = "Dependencies in the package added, Changed the word country into file - so it's a bit independend from the license plates" 
      dir_name = "src"            #Name of the subfolder containing your package source files (e.g. usr\share\icons\hicolor\scalable\myappicon.svg, usr\lib\myapp\somelib.py). We suggest to leave it named src in all projects and will refer to that in the wiki article on maemo.org
      #Thanks to DareTheHair from talk.maemo.org for this snippet that recursively builds the file list 
      for root, dirs, files in os.walk(dir_name):
