@@ -2,7 +2,7 @@
 
 KFZcheck is a small program written in python and uses the Qt toolkit (since Version 2.0)
 It searches for car (in german kfz) license plates shortcuts and the cities according to 
-the searchword - german example: S for Stuttgart. A german, austrian, swiss and poland license plate
+the searchword - german example: S for Stuttgart. A german, austrian, swiss, french and poland license plate
 list is till now included.
 
 You can search for the shortcut or for the cityname, normally you search lowercase. If a shortcut matches correctly it will be displayed first. When you search for a city and it gives several results, all will be displayed - For Example you search for 'go' (no shortcut matches), you will get 'GS, Goslar (NiSa) GTH, Gotha (Thür)' as result, because the first letters of the cities are matching. If you write uppercase it will show you all license plates that starts with your search.
