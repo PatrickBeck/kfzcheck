@@ -21,7 +21,7 @@
     <message>
         <location filename="gui.ui" line="147"/>
         <source>Country</source>
-        <translation>Land</translation>
+        <translation type="obsolete">Land</translation>
     </message>
     <message>
         <location filename="kfzcheck.py" line="207"/>
@@ -58,7 +58,7 @@ Feedback ist willkommen an pbeck@yourse.de</translation>
     <message>
         <location filename="kfzcheck.py" line="74"/>
         <source>Select country</source>
-        <translation>Land auswählen</translation>
+        <translation type="obsolete">Land auswählen</translation>
     </message>
     <message>
         <location filename="kfzcheck.py" line="199"/>
@@ -97,6 +97,16 @@ Feedback ist willkommen an pbeck@yourse.de</translation>
 &lt;p&gt;Andere Datenquellen haben die gleiche Suchfunktion - Beachte die Reihenfolge.&lt;/p&gt;
 
 &lt;p&gt;Feedback ist willkommen bei &lt;a href=&quot;mailto:pbeck@yourse.de&quot;&gt;&lt;span style=&quot; text-decoration: bold; color:#ff5c00;&quot;&gt;pbeck@yourse.de&lt;/span&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="gui.ui" line="147"/>
+        <source>File</source>
+        <translation>Datei</translation>
+    </message>
+    <message>
+        <location filename="kfzcheck.py" line="74"/>
+        <source>Select file</source>
+        <translation>Datei auswählen</translation>
     </message>
 </context>
 </TS>

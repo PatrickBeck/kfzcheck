@@ -71,7 +71,7 @@ class KFZcheck(QMainWindow):
         self.ui.setupUi(self)
 
         self.countrybox = QDialog() # create a dialog for the country selector
-        self.countrybox.setWindowTitle(self.tr("Select country"))
+        self.countrybox.setWindowTitle(self.tr("Select file"))
         self.countrybox.setFixedHeight(350) # it's not the best way ...
         self.countryvertical = QVBoxLayout(self.countrybox) # create a vertical layout - full width of the screen
         self.countryfield = QListWidget(self.countrybox) # for the country selector
@@ -166,7 +166,7 @@ class KFZcheck(QMainWindow):
         newItem = QListWidgetItem()
         newItem.setText(textToadd)
         textToAddList = unicode(textToadd).splitlines()
-
+        
         if len(textToAddList) == 2: # when two lines - the state is always on a newline - check if a image exists - it's not a problem when no image exists
             textIcon = textToAddList[1] # get the name of the image
             self.Config.read(self.kfzcheck_ini)

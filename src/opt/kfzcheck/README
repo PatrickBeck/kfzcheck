@@ -53,7 +53,7 @@ province (the third entry in the csv file). The search after the icons is casese
 
 ===== Developer information  =====
 
-Useful information for pyqt. When you use the designer to create your ui you can translate it with "pyuic gui.ui -o gui.py"
+Useful information for pyqt. When you use the designer to create your ui you can translate it with "pyuic4 gui.ui -o gui.py"
 For language translation you have to add the language file (de_DE.ts for example) to "translate.pro" and call it with
 "pylupdate4 translate.pro". The language file will be created in the "locale" folder. The easiest way is to edit the files with
 qt linguist. It's a graphical user interface for translation. After the translation you have to release the file (create the *.qm file)

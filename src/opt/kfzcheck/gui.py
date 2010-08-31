@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Sat Aug 14 11:36:13 2010
+# Created: Tue Aug 31 18:00:48 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -82,6 +82,6 @@ class Ui_KFZcheck(object):
         self.actionMiddle.setText(QtGui.QApplication.translate("KFZcheck", "Middle", None, QtGui.QApplication.UnicodeUTF8))
         self.actionTop.setText(QtGui.QApplication.translate("KFZcheck", "Top", None, QtGui.QApplication.UnicodeUTF8))
         self.actionBottom.setText(QtGui.QApplication.translate("KFZcheck", "Bottom", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionCountry.setText(QtGui.QApplication.translate("KFZcheck", "Country", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionCountry.setText(QtGui.QApplication.translate("KFZcheck", "File", None, QtGui.QApplication.UnicodeUTF8))
         self.actionAbout.setText(QtGui.QApplication.translate("KFZcheck", "About", None, QtGui.QApplication.UnicodeUTF8))
 
