@@ -69,6 +69,10 @@ i'am interested to integrate it in the offical release - please mail me at pbeck
 (c) Patrick Beck
 KFZcheck is licensed under the GPL3 license
 
+===== Data source =====
+
+The most parts of the datasets (license plates files, etc.) has Wikipedia as source. 
+
 ===== Contributors in the Maemo version =====
 
 Thanks to all contributors :) For new Datasets, Bug reports and all helping hands :) 
