@@ -114,6 +114,7 @@ class KFZcheck(QMainWindow):
             self.addItemstoList(self.tr("csv file not found or has not enough rights."))
             self.ui.searchfield.hide() # no searchoption - the message will be stay on the screen
         
+        self.setWindowTitle('KFZcheck - %s ' % (kfzlist)) # set the name of the current list in the the window title
         self.filterTop() # jump to the beginning after loading a new csv file 
         
         self.countrybox.hide() # hide the QDialog
