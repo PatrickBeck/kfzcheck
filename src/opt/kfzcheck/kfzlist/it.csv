@@ -18,102 +18,100 @@ BR,Brindisi,Apulia
 BS,Brescia,Lombardia
 BT,Barletta-Andria-Trani,Apulia
 BZ,Bolzano,Trentino-Alto-Adige
-CA,Cagliari
-CB,Campobasso
-CE,Caserta
-CG,Castrogiovanni (bis 1927, danach EN für Enna)
-CH,Chieti
-CI,Carbonia-Iglesias (ab 2005)
-CL,Caltanissetta
-CN,Cuneo (ab 1928, davor CU)
-CO,Como
-CR,Cremona
-CS,Cosenza
-CT,Catania
-CU,Cuneo (bis 1928, danach CN)
-CZ,Catanzaro
-EN,Enna (ab 1927, davor CG für Castriogiovanni)
-FC,Forlì-Cesena (ab 1994, davor FO für Forlì)
-FE,Ferrara
-FG,Foggia
-FI,Firenze (deutsch,Florenz)
-FM,Fermo seit 2009 (Fiume 1930 bis 1945, davor FU)
-FO,Forlì (bis 1994, danach FC für Forlì-Cesena)
-FR,Frosinone (ab 1927)
-FU,Fiume (bis 1930, danach FM)
-GE,Genova (deutsch,Genua)
-GI,Girgenti (bis 1928, danach AG für Agrigento)
-GO,Gorizia (deutsch,Görz)
-GR,Grosseto
-IM,Imperia
-IS,Isernia (ab 1970)
-KR,Crotone (ab 1992)
-LC,Lecco (ab 1992)
-LE,Lecce
-LI,Livorno
-LO,Lodi (ab 1992)
-LT,Latina (ab 1933)
-LU,Lucca
-MB,Monza e Brianza (ab 2009)
-MC,Macerata
-ME,Messina
-MI,Milano (deutsch,Mailand)
-MN,Mantova (deutsch,Mantua)
-MO,Modena
-MS,Massa-Carrara (bis 1939 und wieder ab 1949, in der Zwischenzeit AP für Apuania)
-MT,Matera
-NA,Napoli (deutsch,Neapel)
-NO,Novara
-NU,Nuoro
-OG,Ogliastra (ab 2005)
-OR,Oristano (ab 1976)
-OT,Olbia-Tempio (ab 2005)
-PA,Palermo
-PC,Piacenza
-PD,Padova (deutsch,Padua)
-PE,Pescara
-PG,Perugia (ab 1933, davor PU)
-PI,Pisa
-PN,Pordenone (ab 1967)
-PO,Prato
-PR,Parma
-PS,Pesaro Urbino (bis 1994, danach PU)
-PT,Pistoia
-PU,Pesaro Urbino seit 1994 davor PS (Perugia bis 1933, danach PG)
-PV,Pavia
-PZ,Potenza
-RA,Ravenna
-RC,Reggio di Calabria
-RE,Reggio Emilia
-RG,Ragusa
-RI,Rieti
-RM,Roma (deutsch,Rom; auch,Roma)
-RN,Rimini (ab 1992)
-RO,Rovigo
-Roma,siehe RM
-SA,Salerno
-SI,Siena
-SO,Sondrio
-SP,La Spezia
-SR,Siracusa (deutsch,Syrakus)
-SS,Sassari
-SV,Savona
-TA,Taranto (deutsch,Tarent)
-TE,Teramo
-TN,Trento (deutsch,Trient; mit dem Landeswappen, dem Wenzelsadler)
-TO,Torino (deutsch,Turin)
-TP,Trapani
-TR,Terni
-TS,Trieste (deutsch,Triest; bis 1945 und wieder ab 1954)
-TV,Treviso
-UD,Udine
-VA,Varese
-VB,Verbano-Cusio-Ossola (ab 1992)
-VC,Vercelli
-VE,Venezia (deutsch,Venedig)
-VI,Vicenza
-VR,Verona
-VS,Medio Campidano (ab 2006)
-VT,Viterbo
-VV,Vibo Valentia (ab 1992)
-ZA,Zara (bis 1945) 
+CA,Cagliari,Sardegna
+CB,Campobasso,Molise
+CE,Caserta,Campania
+CG,Castrogiovanni,Siciliana
+CH,Chieti,Abruzzo
+CI,Carbonia-Iglesias,Sardegna
+CL,Caltanissetta,Siciliana
+CN,Cuneo,Piemonte
+CO,Como,Lombardia
+CR,Cremona,Lombardia
+CS,Cosenza,Calabria
+CT,Catania,Siciliana
+CU,Cuneo,Piemonte
+CZ,Catanzaro,Calabria
+EN,Enna,Siciliana
+FC,Forlì-Cesena,Emilia-Romagna
+FE,Ferrara,Emilia-Romagna
+FG,Foggia,Apulia
+FI,Firenze,Toscana
+FM,Fermo,Marche
+FO,Forlì,Emilia-Romagna
+FR,Frosinone,Lazio
+GE,Genova,Liguria
+GI,Girgenti,Siciliana
+GO,Gorizia,Friuli-Venezia-Giulia
+GR,Grosseto,Toscana
+IM,Imperia,Liguria
+IS,Isernia,Molise
+KR,Crotone,Calabria
+LC,Lecco,Lombardia
+LE,Lecce,Apulia
+LI,Livorno,Toscana
+LO,Lodi,Lombardia
+LT,Latina,Lazio
+LU,Lucca,Toscana
+MB,Monza e Brianza,Lombardia
+MC,Macerata,Marche
+ME,Messina,Siciliana
+MI,Milano,Lombardia
+MN,Mantova,Lombardia
+MO,Modena,Emilia-Romagna
+MS,Massa-Carrara,Toscana
+MT,Matera,Basilicata
+NA,Napoli,Campania
+NO,Novara,Piemonte
+NU,Nuoro,Sardegna
+OG,Ogliastra,Sardegna
+OR,Oristano,Sardegna
+OT,Olbia-Tempio,Sardegna
+PA,Palermo,Siciliana
+PC,Piacenza,Emilia-Romagna
+PD,Padova,Veneto
+PE,Pescara,Abruzzo
+PG,Perugia,Umbria
+PI,Pisa,Toscana
+PN,Pordenone,Friuli-Venezia-Giulia
+PO,Prato,Toscana
+PR,Parma,Emilia-Romagna
+PS,Pesaro Urbino,Marche
+PT,Pistoia,Toscana
+PU,Pesaro Urbino,Marche
+PV,Pavia,Lombardia
+PZ,Potenza,Basilicata
+RA,Ravenna,Emilia-Romagna
+RC,Reggio di Calabria,Calabria
+RE,Reggio Emilia,Emilia-Romagna
+RG,Ragusa,Siciliana
+RI,Rieti,Lazio
+RM,Roma,Lazio
+RN,Rimini,Emilia-Romagna
+RO,Rovigo,Veneto
+Roma,Roma,Lazio
+SA,Salerno,Campania
+SI,Siena,Toscana
+SO,Sondrio,Lombardia
+SP,La Spezia,Liguria
+SR,Siracusa,Siciliana
+SS,Sassari,Sardegna
+SV,Savona,Liguria
+TA,Taranto,Apulia
+TE,Teramo,Abruzzo
+TN,Trento,Trentino-Alto-Adige
+TO,Torino,Piemonte
+TP,Trapani,Siciliana
+TR,Terni,Umbria
+TS,Trieste,Friuli-Venezia-Giulia
+TV,Treviso,Veneto
+UD,Udine,Friuli-Venezia-Giulia
+VA,Varese,Lombardia
+VB,Verbano-Cusio-Ossola,Piemonte
+VC,Vercelli,Piemonte
+VE,Venezia,Veneto
+VI,Vicenza,Veneto
+VR,Verona,Veneto
+VS,Medio Campidano,Sardegna
+VT,Viterbo,Lazio
+VV,Vibo Valentia,Calabria
