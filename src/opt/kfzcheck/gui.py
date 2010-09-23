@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Tue Aug 31 18:00:48 2010
+# Created: Thu Sep 23 20:23:26 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -68,10 +68,15 @@ class Ui_KFZcheck(object):
         self.actionCountry.setObjectName("actionCountry")
         self.actionAbout = QtGui.QAction(KFZcheck)
         self.actionAbout.setObjectName("actionAbout")
+        self.actionExtras = QtGui.QAction(KFZcheck)
+        self.actionExtras.setText("Extras")
+        self.actionExtras.setVisible(False)
+        self.actionExtras.setObjectName("actionExtras")
         self.menuKFZcheck.addAction(self.actionTop)
         self.menuKFZcheck.addAction(self.actionMiddle)
         self.menuKFZcheck.addAction(self.actionBottom)
         self.menuKFZcheck.addAction(self.actionCountry)
+        self.menuKFZcheck.addAction(self.actionExtras)
         self.menuKFZcheck.addAction(self.actionAbout)
         self.menubar.addAction(self.menuKFZcheck.menuAction())
 
@@ -82,6 +87,6 @@ class Ui_KFZcheck(object):
         self.actionMiddle.setText(QtGui.QApplication.translate("KFZcheck", "Middle", None, QtGui.QApplication.UnicodeUTF8))
         self.actionTop.setText(QtGui.QApplication.translate("KFZcheck", "Top", None, QtGui.QApplication.UnicodeUTF8))
         self.actionBottom.setText(QtGui.QApplication.translate("KFZcheck", "Bottom", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionCountry.setText(QtGui.QApplication.translate("KFZcheck", "File", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionCountry.setText(QtGui.QApplication.translate("KFZcheck", "Country", None, QtGui.QApplication.UnicodeUTF8))
         self.actionAbout.setText(QtGui.QApplication.translate("KFZcheck", "About", None, QtGui.QApplication.UnicodeUTF8))
 

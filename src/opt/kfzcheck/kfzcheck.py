@@ -3,8 +3,8 @@
 
 '''
 Filename: kfzcheck.py
-Version: 2.2
-last change: 2010-09-04
+Version: 2.3
+last change: 2010-09-23
 Function: KFZcheck is a small program written in python and uses the Qt toolkit. 
 It searches for car (in german kfz) license plates shortcuts and the cities according to the 
 searchword - german example: S for Stuttgart. 
@@ -46,6 +46,8 @@ class KFZcheck(QMainWindow):
     appName = sys.argv[0].split('/')[-1] # get the application name
     pathToFile = sys.argv[0].rstrip(appName) # extract the path from the current dir to the app - and exclude the application name
     kfzcheck_dir = '%s/%s' % (workingDir, pathToFile) # create the absolute path to the application dir
+    kfzcheck_list_dir = 'kfzlist'
+    kfzcheck_extras = 'extras/'
 
     listfield_list = [] # data for searching
     
@@ -70,7 +72,7 @@ class KFZcheck(QMainWindow):
         self.ui = Ui_KFZcheck() # load the qt-designer generated gui file
         self.ui.setupUi(self)
 
-        self.countrybox = QDialog() # create a dialog for the country selector
+        self.countrybox = QDialog() # create a dialog for the country (and extras) selector
         self.countrybox.setWindowTitle(self.tr("Select file"))
         self.countrybox.setFixedHeight(350) # it's not the best way ...
         self.countryvertical = QVBoxLayout(self.countrybox) # create a vertical layout - full width of the screen
@@ -88,12 +90,24 @@ class KFZcheck(QMainWindow):
         QObject.connect(self.ui.actionBottom, SIGNAL('triggered()'), self.filterBottom)
         QObject.connect(self.ui.actionAbout, SIGNAL('triggered()'), self.about)
         QObject.connect(self.ui.actionCountry, SIGNAL('triggered()'), self.countrySelector)
+        QObject.connect(self.ui.actionExtras, SIGNAL('triggered()'), self.extrasSelector) # loads self.countrySelector with a dir parameter
         QObject.connect(self.countryfield, SIGNAL('itemActivated(QListWidgetItem *)'), self.loadCountry)
+
+        extras_path = '%s%s/%s' % (self.kfzcheck_dir, self.kfzcheck_list_dir, self.kfzcheck_extras)
+        if os.path.isdir(extras_path): # if the extras dir exists 
+            self.ui.actionExtras.setVisible(True) # show the action menu for the extras list - it's hidden normally
 
         self.load(self.firstload)
 
     def load(self, kfzlist):
-        csvfile = '%skfzlist/%s.csv' % (self.kfzcheck_dir, kfzlist)
+        csvfile_country = '%s%s/%s.csv' % (self.kfzcheck_dir, self.kfzcheck_list_dir, kfzlist)
+        csvfile_extras = '%s%s/%s%s.csv' % (self.kfzcheck_dir, self.kfzcheck_list_dir, self.kfzcheck_extras, kfzlist)
+
+        if os.path.isfile(csvfile_country): # a bit ... circular, but it's easy ;)
+            csvfile = csvfile_country # it's not as modular as is can be but it searches in two directorys for files
+        else:
+            csvfile = csvfile_extras
+
         try:
             file = csv.reader(open(csvfile), delimiter=',') # parse the csv file
         
@@ -119,7 +133,7 @@ class KFZcheck(QMainWindow):
         
         self.countrybox.hide() # hide the QDialog
         self.countryfield.hide() # hide the country selector after pressing the next file to load
-        self.countryfield.clear() # delete the content of the selector - or it will be twice in the field
+        
     
     def loadCountry(self):
         self.ui.searchfield.setText(QString(''))
@@ -222,11 +236,17 @@ class KFZcheck(QMainWindow):
         
         self.aboutDialog.show() # show the whole dialog
 
-    def countrySelector(self):
+    def extrasSelector(self): # only a helper function to call countrySelector
+        self.countrySelector(self.kfzcheck_extras) 
+
+    def countrySelector(self, dir=''): # dir is a optional argument
+        self.countryfield.clear() # delete the content of the selector - or it will be twice in the field
+        
         country_list = []
-        path = '%s/kfzlist/' % (self.kfzcheck_dir)
-        for i in os.walk(path): # search all csv files and create a country code list
-            for i in i[2]:
+        path = '%s/%s/%s' % (self.kfzcheck_dir, self.kfzcheck_list_dir, dir) # if dir is set it will look on a subfolder of kfzlist/
+        files = os.listdir(path)
+        for i in files: # search all csv files and create a country code (or extras) list
+            if os.path.isfile(path + i):
                 country_list.append(i.replace('.csv', ''))
         country_list.sort() # alphabetical sort
         for i in country_list:

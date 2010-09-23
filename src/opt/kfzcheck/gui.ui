@@ -105,6 +105,7 @@
     <addaction name="actionMiddle"/>
     <addaction name="actionBottom"/>
     <addaction name="actionCountry"/>
+    <addaction name="actionExtras"/>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuKFZcheck"/>
@@ -144,12 +145,20 @@
   </action>
   <action name="actionCountry">
    <property name="text">
-    <string>File</string>
+    <string>Country</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionExtras">
+   <property name="text">
+    <string notr="true">Extras</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
    </property>
   </action>
  </widget>
