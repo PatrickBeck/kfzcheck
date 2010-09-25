@@ -19,13 +19,15 @@ You can install kfzcheck for Maemo out of the extras-devel repository. In the Ma
 
 ===== kfzcheck-extras =====
 
-kfzcheck-extras is a collection of different lists with useful information. After the installation the new lists will be displayed in the country selector. Till now the following lists are included:
+kfzcheck-extras is a collection of different lists with useful information. After the installation the new lists will be displayed in a new menu point "extras". Till now the following lists are included:
 
     * E-Numbers - ingredients in foods
     * Molkereien_de - german dairy companys with name out of a number
     * ISO codes - german version
     * Top level domains
     * IATA airport codes
+    * Internationale call numbers
+    * PLZ DE - postcodes germany
 
 ==== Install ====
 
@@ -38,6 +40,8 @@ named with the country code => Example de.csv for germany.
 
 It's possible to create own csv files with any content you like => numbers, post codes, etc.
 You have only to look that the file has at least two and at most three entrys.
+
+When you create a list that should be displayed in the menu point "extras" you have to move the file into kfzlist/extras. Create it, if it not exists.
 
 ==== German file struture - de.csv ====
 
