@@ -45,7 +45,11 @@ class KFZcheck(QMainWindow):
     workingDir = os.getcwd() # get the current directory
     appName = sys.argv[0].split('/')[-1] # get the application name
     pathToFile = sys.argv[0].rstrip(appName) # extract the path from the current dir to the app - and exclude the application name
-    kfzcheck_dir = '%s/%s' % (workingDir, pathToFile) # create the absolute path to the application dir
+
+    if pathToFile[0] == '/': # to differentiate between absolute and relative path
+        kfzcheck_dir = pathToFile # absolute path
+    else:
+        kfzcheck_dir = '%s/%s' % (workingDir, pathToFile) # create the absolute path out of the relative one
     kfzcheck_list_dir = 'kfzlist'
     kfzcheck_extras = 'extras/'
 
