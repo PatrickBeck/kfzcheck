@@ -3,8 +3,8 @@
 
 '''
 Filename: kfzcheck.py
-Version: 2.3
-last change: 2010-09-23
+Version: 2.5
+last change: 2010-09-28
 Function: KFZcheck is a small program written in python and uses the Qt toolkit. 
 It searches for car (in german kfz) license plates shortcuts and the cities according to the 
 searchword - german example: S for Stuttgart. 
