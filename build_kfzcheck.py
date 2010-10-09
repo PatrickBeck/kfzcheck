@@ -19,7 +19,7 @@ if __name__ == "__main__":
      print
      p=py2deb.Py2deb("kfzcheck")   #This is the package name and MUST be in lowercase! (using e.g. "mClock" fails miserably...)
      p.description="""KFZcheck searches for car (in german KFZ) license plates shortcuts.\nIt can search for a shortcut and a city / region - german example: S for Stuttgart. 
-A german, austrian, swiss, french, italy, poland and czech list is included"""
+A german, austrian, swiss, french, italian, polish and czech list is included"""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
      p.depends = "python2.5, python2.5-qt4-common, python2.5-qt4-core, python2.5-qt4-gui"
