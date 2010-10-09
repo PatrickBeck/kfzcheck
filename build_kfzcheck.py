@@ -19,7 +19,7 @@ if __name__ == "__main__":
      print
      p=py2deb.Py2deb("kfzcheck")   #This is the package name and MUST be in lowercase! (using e.g. "mClock" fails miserably...)
      p.description="""KFZcheck searches for car (in german KFZ) license plates shortcuts.\nIt can search for a shortcut and a city / region - german example: S for Stuttgart. 
-A german, austrian, swiss, french, italy and poland list is included"""
+A german, austrian, swiss, french, italy, poland and czech list is included"""
      p.author="Patrick Beck"
      p.mail="pbeck@yourse.de"
      p.depends = "python2.5, python2.5-qt4-common, python2.5-qt4-core, python2.5-qt4-gui"
@@ -39,9 +39,9 @@ A german, austrian, swiss, french, italy and poland list is included"""
      #  p.preremove="""#!/bin/sh
      #  chmod +x /usr/bin/mclock.py""" #Set here your pre remove script
      version = "2.5"           #Version of your software, e.g. "1.2.0" or "0.8.2"
-     build = "0"                 #Build number, e.g. "1" for the first build of this version of your software. Increment for later re-builds of the same version of your software.
+     build = "1"                 #Build number, e.g. "1" for the first build of this version of your software. Increment for later re-builds of the same version of your software.
                                  #Text with changelog information to be displayed in the package "Details" tab of the Maemo Application Manager
-     changeloginformation = "Italy added, Extralists now in a second choose dialog. Country / file will be shown in the window title. Bugs fixed" 
+     changeloginformation = "czech republic added and bug in french country file fixed." 
      dir_name = "src"            #Name of the subfolder containing your package source files (e.g. usr\share\icons\hicolor\scalable\myappicon.svg, usr\lib\myapp\somelib.py). We suggest to leave it named src in all projects and will refer to that in the wiki article on maemo.org
      #Thanks to DareTheHair from talk.maemo.org for this snippet that recursively builds the file list 
      for root, dirs, files in os.walk(dir_name):
