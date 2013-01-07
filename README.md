@@ -1,0 +1,83 @@
+# KFZcheck
+
+KFZcheck is a small program written in python and uses the Qt toolkit (since Version 2.0)
+It searches for car (in german kfz) license plates shortcuts and the cities according to 
+the searchword - german example: S for Stuttgart. A german, austrian, swiss, french, italian, polish, russian and czech license plate list is till now included.
+
+You can search for the shortcut or for the cityname, normally you search lowercase. If a shortcut matches correctly it will be displayed first. When you search for a city and it gives several results, all will be displayed - For Example you search for 'go' (no shortcut matches), you will get 'GS, Goslar (NiSa) GTH, Gotha (Thür)' as result, because the first letters of the cities are matching. If you write uppercase it will show you all license plates that starts with your search.
+
+You can change the country file (csv-file) with a click on KFZcheck at the top and on "country". You can jump to the top, middle and bottom at the menu as well.
+
+The ~/.kfzcheck.ini saves the last selected country so you can load your favorite first :) It will
+be set automaticly when you change the country in the gui.
+
+## Install
+
+You can install kfzcheck for Maemo out of the extras-devel repository. In the Maemo Package Version overview you can download <http://maemo.org/packages/view/kfzcheck/|source and deb>
+
+
+## kfzcheck-extras 
+
+kfzcheck-extras is a collection of different lists with useful information. After the installation the new lists will be displayed in a new menu point "extras". Till now the following lists are included:
+
+    * E-Numbers - ingredients in foods
+    * Molkereien_de - german dairy companys with name out of a number
+    * ISO codes - german version
+    * Top level domains
+    * IATA airport codes
+    * Internationale call numbers
+    * PLZ DE - postcodes germany
+
+### Install 
+
+You can install kfzcheck-extras for Maemo out of the extras-devel repository. In the Maemo Package Version overview you can download on <http://maemo.org/packages/view/kfzcheck-extras/> the deb package.
+
+## Creating a own csv file
+
+KFZcheck searches automatically for csv files in "/opt/kfzcheck/kfzlist/". The files should be
+named with the country code => Example de.csv for germany.
+
+It's possible to create own csv files with any content you like => numbers, post codes, etc.
+You have only to look that the file has at least two and at most three entrys.
+
+When you create a list that should be displayed in the menu point "extras" you have to move the file into kfzlist/extras. Create it, if it not exists.
+
+### German file struture - de.csv 
+
+The german file structur is for example => S,Stuttgart,Baden-Württemberg
+S is the car license plate shortcut, Stuttgart the according city to the shortcut and Baden-Württemberg
+stands for a province (a state in state).
+
+### Display emblems
+
+When emblems should be displayed you have to create a folder in /opt/kfzcheck/wappen/ with the csv filename.
+In the folder you can save the differend emblems. They have to be .png files with the exactly name of the 
+province (the third entry in the csv file). The search after the icons is casesensitive.
+
+## Developer information
+
+Useful information for pyqt. When you use the designer to create your ui you can translate it with "pyuic4 gui.ui -o gui.py"
+For language translation you have to add the language file (de_DE.ts for example) to "translate.pro" and call it with
+"pylupdate4 translate.pro". The language file will be created in the "locale" folder. The easiest way is to edit the files with
+qt linguist. It's a graphical user interface for translation. After the translation you have to release the file (create the *.qm file)
+in the File dialog.
+
+## Feedback 
+
+Any feedback or when you have created a country pack, numbers, post code, any other useful csv file or a translation, 
+i'am interested to integrate it in the offical release - please mail me at pbeck [at] yourse [DOT] de :)
+
+## Data source 
+
+The most parts of the datasets (license plates files, etc.) has Wikipedia as source. 
+
+## Contributors in the Maemo version
+
+Thanks to all contributors :) For new Datasets, Bug reports and all helping hands :) 
+
+Bartholomäus Wloka
+treofant
+Daniel Fett
+Bernd Abel
+Olaf Schulz
+Vadim Frolov
